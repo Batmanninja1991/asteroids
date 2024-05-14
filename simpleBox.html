@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+          display: grid;
+          gap: 20px; /* Space between the boxes */
+          justify-content: center; /* Centers the grid items horizontally */
+          align-items: center; /* Aligns the grid items vertically within their cells */
+          margin-top: 50px; /* Top margin for spacing */
+          padding: 20px; /* Padding around the container */
+          box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+      
+        .small-box, .medium-box, .large-box {
+          background-color: gray;
+          transition: all 0.5s ease; /* Smooth transition for all properties */
+        }
+      
+        .small-box {
+          width: 100px;
+          height: 100px;
+        }
+      
+        .medium-box {
+          width: 200px;
+          height: 150px;
+        }
+      
+        .large-box {
+          width: 300px;
+          height: 250px;
+        }
+      </style>
+      
+  </head>
+  <body>
+    <div class="container">
+      <div class="small-box"></div>
+    </div>
+    <div class="container">
+      <div class="medium-box"></div>
+    </div>
+    <div class="container">
+      <div class="large-box"></div>
+    </div>
+  </body>
+  <script>
+    const smallBox = document.querySelector(".small-box");
+    const mediumBox = document.querySelector(".medium-box");
+    const largeBox = document.querySelector(".large-box");
+
+    smallBox.addEventListener("mouseover", () => {
+      smallBox.style.width = "200px";
+      smallBox.style.height = "200px";
+      smallBox.style.backgroundColor = "red";
+    });
+
+    smallBox.addEventListener("mouseout", () => {
+      smallBox.style.width = "100px";
+      smallBox.style.height = "100px";
+      smallBox.style.backgroundColor = "grey";
+      smallBox.style.transform += "rotate(90deg)";
+    });
+
+    mediumBox.addEventListener("mouseover", () => {
+      mediumBox.style.width = "500px";
+      mediumBox.style.height = "300px";
+      mediumBox.style.backgroundColor = "red";
+    });
+
+    mediumBox.addEventListener("mouseout", () => {
+      mediumBox.style.width = "250px";
+      mediumBox.style.height = "150px";
+      mediumBox.style.backgroundColor = "grey";
+      mediumBox.style.transform += "rotate(90deg)";
+    });
+
+    largeBox.addEventListener("mouseover", () => {
+      largeBox.style.width = "700px";
+      largeBox.style.height = "500px";
+      largeBox.style.backgroundColor = "red";
+    });
+
+    largeBox.addEventListener("mouseout", () => {
+      largeBox.style.width = "350px";
+      largeBox.style.height = "250px";
+      largeBox.style.backgroundColor = "grey";
+      largeBox.style.transform += "rotate(90deg)";
+    });
+  </script>
+</html>
